@@ -1,0 +1,34 @@
+1.
+Well, "this" is a pointer to it's own class.
+We can't just user the variable name, because
+they are defined as something else in that scope
+
+2.
+
+These two variables are inherited from Shape class
+So we can use the arrow function to access them
+
+3.
+
+Virtual allows methods in the parent class to be
+overwritten by methods in classes that inherit from it.
+
+"= 0" makes that class abstract meaning that it can't
+be initialized, so we have to create a child class in order
+initialize it.
+
+
+4.
+
+This initializes the parent class with x and y, so
+Circle has something to inherit from
+
+If you remove it, Circle can't inherit x and y from it.
+It won't compile
+
+
+5.
+
+line 33 of GridWriter.cpp takes a reference to a Shape as the argument
+
+You can pass in any classes that inherit from Shape, so it's polymorphic.
