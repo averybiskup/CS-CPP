@@ -1,0 +1,41 @@
+A mostly complete version of the eight queens problem has been provided for you to download. This version has the class Queens nearly completed.
+
+
+
+You are to provide missing logic for the class Queens that will enable it to create a two-dimensional array that will represent a chess board with eight rows and eight columns. You are also to modify logic to display the chess board such that the display uses a nested loop to print the rows and columns of the chessboard. To do this, you must write logic for:
+
+
+
++clearBoard()
+
+
+
+and modify logic for:
+
+
+
++displayBoard()
+
+
+
+After this is done, you are to write a driver program named Lab4 that has a main() function responsible for making an object from the Queens class. The main() function must also use that Queens object to start the first queen of the chess board in the first column of the chess board. Once the first queen has been placed on the chess board, you must use its displayBoard() method to show you the solution to the eight queens problem
+
+(Actually, the eight queens problem has many solutions, but the solution you will be displaying is based on the queen being placed in a specific position the first column of the chess board based on logic already programmed into the Queens class).
+
+
+
+You are to submit for this lab:
+
+(1) The modified Queens class with clearBoard() and displayBoard() properly working
+
+(2) The new program driver class that has the main() method fully implemented as described previously.
+
+The Queens class is available in these files for you to download:
+
+Queens.hPreview the document
+
+Queens.cppPreview the document
+
+
+
+Once you are done getting the lab to work, pay particular attention to the logic in the placeQueens() method.  There are comments indicating how backtracking is used.  See how the recursive call is used in the case that a queen is determined to be placed, and how backtracking occurs in the case that a queen has been found to have to be taken back from a position where it was placed.  See that backtracking is a way of using decisions to determine if a current state of logic should be allowed, or if the logic should be undone since the logic does not lead to a solution.  Understanding this is the essence of understanding how backtracking algorithms are implemented.

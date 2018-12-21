@@ -1,27 +1,41 @@
 /* File:  Queens.cpp */
 
 #include "Queens.h"
+#include <iostream>
+
+using namespace std;
 
 Queens::Queens() {
     int rows = BOARD_SIZE;
     int columns = BOARD_SIZE;
-    
+
     // memory allocated for elements of rows.
     board = new int *[rows] ;
 
     // memory allocated for elements of each column.
     for( int i = 0 ; i < rows ; i++ )
       board[i] = new int[columns];
-    
+
 } // end constructor
 
 void Queens::clearBoard() {
+  for (int i = 0; i < BOARD_SIZE; i++) {
+    for (int j = 0; j < BOARD_SIZE; j++) {
+      board[i][j] = EMPTY;
+    }
+  }
    // place your logic to implement this method here
 }  // end clearBoard
 
 void Queens::displayBoard() {
   for (int i=0; i<BOARD_SIZE; i++) {
     for (int j=0; j<BOARD_SIZE; j++) {
+      if (board[i][j] == QUEEN) {
+        cout << QUEEN << " ";
+      } else {
+        cout << EMPTY << " ";
+      }
+      // cout << " 0 ";
       // place your logic to implement this method here
       // that prints a single row of the chess board
       // to the console window (i.e., standard output)
@@ -39,7 +53,7 @@ bool Queens::placeQueens(int column) {
   else {
     bool queenPlaced = false;
     int row = 1;  // number of square in column
-    
+
     while ( !queenPlaced && (row <= BOARD_SIZE)  )  {
       // if square can be attacked
       if (isUnderAttack(row, column)) {
@@ -82,7 +96,7 @@ bool Queens::isUnderAttack(int row, int column) {
       return true;
     }
   }
- 	
+
   // check lower diagnal
   int lower_dir_row = row-2;
   int lower_dir_column = column-2;
@@ -109,5 +123,3 @@ bool Queens::isUnderAttack(int row, int column) {
   return false;
 
 } // end isUnderAttack
-
-    

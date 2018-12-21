@@ -14,7 +14,7 @@ class Queens
  private:
   // chess board -- a C++ 2-dimensional dynamic array
   int **board;
-  
+
   // squares per row or per column
   const static int BOARD_SIZE = 8;
 
@@ -24,7 +24,7 @@ class Queens
   //used to indicate square contains a queen
   const static int QUEEN = 1;
 
- public:  
+ public:
   Queens();
   // --------------------------------------------------
   //  Constructor:  Create an empty square board.
@@ -45,7 +45,7 @@ class Queens
   // output; zero is an EMPTY square, one is a square
   // containing a queen (QUEEN)
   // --------------------------------------------------
- 
+
   bool placeQueens(int column);
     // --------------------------------------------------
     // Place queens in columns of the board beginning
@@ -77,7 +77,7 @@ class Queens
     // given row and column to EMPTY.
     // --------------------------------------------------
 
-  bool isUnderAttack(int row, int column); 
+  bool isUnderAttack(int row, int column);
     // --------------------------------------------------
     // Determines whether the square on the board at a
     // given row and column is under attack by any queens
@@ -90,12 +90,7 @@ class Queens
     // attack, returns true; otherwise, returns false.
     // --------------------------------------------------
 
+
 }; // end Queens
 
 #endif
-
-
-	
-	    
-    
-    
